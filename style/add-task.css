@@ -265,7 +265,6 @@ body {
   gap: 8px;
 }
 
-/* Category */
 .addTaskCategory {
   width: 100%;
   height: 120px;
@@ -298,7 +297,6 @@ body {
   outline: none;
 }
 
-/* Subtasks */
 .addTaskSubtasks {
   width: 100%;
   gap: 8px;
@@ -314,11 +312,6 @@ body {
   text-align: left;
 }
 
-/* .addTaskPlus {
-position: relative;
-} */
-
-/*Footer Form */
 .addTaskFooter {
   display: flex;
   justify-content: space-between;
@@ -347,7 +340,6 @@ position: relative;
   left: 50px;
 }
 
-/* SubTask edit / delete */
 .editSubtasks_delEdit {
   margin: 2px;
   padding-left: 6px;
@@ -565,7 +557,7 @@ header {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  /* Better Font Rendering =========== */
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

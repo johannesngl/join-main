@@ -5,8 +5,8 @@ let currentName = "";
 let currentEmail = "";
 let currentPhone = "";
 let currentElement = "";
-let task = []
-let taskId = []
+let task = [];
+let taskId = [];
 
 const AVATAR_COLOR = [
   "#ff7a00",
@@ -24,8 +24,8 @@ const AVATAR_COLOR = [
   "#ff4646",
 ];
 /**
- *Create a default user if there are no contacts in list so far  
-*/
+ *Create a default user if there are no contacts in list so far
+ */
 async function pushdefaultData() {
   let name = "default";
   let email = "default@join.de";
@@ -55,12 +55,11 @@ async function pushdefaultData() {
       console.error("Fehler beim Posten der Daten: ", postError);
     }
   }
-
 }
 
 /**
  * Inot function for contact page
- * @returns 
+ * @returns
  */
 async function onloadFunc() {
   await loadTasks();
@@ -108,7 +107,6 @@ async function onloadFunc() {
       secondInitial: secondInitial,
       id: contactId,
     });
-
   }
 
   getFirstLetters();
@@ -131,7 +129,6 @@ function getFirstLetters() {
   }
   namesFirstLetters.sort();
 }
-
 
 /**
  * render contact list
@@ -167,8 +164,8 @@ function renderContacts() {
 
 /**
  * render contact details of each contact
- * @param {} i 
- * @returns 
+ * @param {} i
+ * @returns
  */
 function renderContactsHtml(i) {
   return `
@@ -276,7 +273,6 @@ function showContactHtml(i) {
  */
 
 async function deleteContact() {
-
   await deleteUserFromTask();
   if (currentElement < 0 || currentElement >= contacts.length) {
     console.error("Index out of bounds");
@@ -333,8 +329,8 @@ function closeDeleteRequest() {
 
 /**
  * load contacts from database
- * @param {} path 
- * @returns 
+ * @param {} path
+ * @returns
  */
 async function getAllContacts(path) {
   let response = await fetch(BASE_URL + path + ".json");
@@ -384,7 +380,7 @@ async function pushAllData(functionType) {
 
 /**
  * edit existing contact
- * @param {*} functionType 
+ * @param {*} functionType
  */
 async function pushAllDataEdit(functionType) {
   const input = functionType;
@@ -424,8 +420,8 @@ async function postData(path = "", data = {}) {
 
 /**
  * update current contact
- * @param {*} data 
- * @returns 
+ * @param {*} data
+ * @returns
  */
 async function putData(data = {}) {
   let contactResponse = await getAllContacts("");
@@ -567,7 +563,7 @@ function closeMobileMenu() {
 }
 
 /**
- * Remove the contact from all tasks assigned to them 
+ * Remove the contact from all tasks assigned to them
  */
 async function deleteUserFromTask() {
   let contactResponse = await getAllContacts("");
@@ -576,7 +572,7 @@ async function deleteUserFromTask() {
   let selectedId = contactsKeys[currentElement];
   for (let i = 0; i < taskId.length; i++) {
     if (task[taskId[i]].assignetTo) {
-      if  (Array.isArray(task[taskId[i]].assignetTo)) {
+      if (Array.isArray(task[taskId[i]].assignetTo)) {
         for (let j = 0; j < task[taskId[i]].assignetTo.length; j++) {
           if (task[taskId[i]].assignetTo[j] === selectedId) {
             task[taskId[i]].assignetTo.splice(j, 1);
@@ -589,24 +585,23 @@ async function deleteUserFromTask() {
   }
 }
 
-
 /**
  * Generate the complete task as JSON from which the user was removed
- * @param {} idTask 
- * @returns 
+ * @param {} idTask
+ * @returns
  */
 function generateEditedTaskAsJson(idTask) {
   let assignetTo = task[idTask].assignetTo;
   let subTask = task[idTask].subtask;
   let updatedTask = {
-      assignetTo: assignetTo,
-      category: `${task[idTask].category}`,
-      currentState: `${task[idTask].currentState}`,
-      description: `${task[idTask].description}`,
-      dueDate: `${task[idTask].dueDate}`,
-      priority: `${task[idTask].priority}`,
-      title: `${task[idTask].title}`,
-      subtask: subTask
+    assignetTo: assignetTo,
+    category: `${task[idTask].category}`,
+    currentState: `${task[idTask].currentState}`,
+    description: `${task[idTask].description}`,
+    dueDate: `${task[idTask].dueDate}`,
+    priority: `${task[idTask].priority}`,
+    title: `${task[idTask].title}`,
+    subtask: subTask,
   };
   return updatedTask;
 }

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +11,6 @@
       rel="stylesheet"
     />
 
-    <!-- Icon -->
     <link rel="icon" href="./assets/img/icon/join_logo.svg" />
     <link
       rel="apple-touch-icon"
@@ -38,14 +36,12 @@
       color="#5bbad5"
     />
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="./style/add-task.css" />
     <link rel="stylesheet" href="./style/add-task-btn.css" />
     <link rel="stylesheet" href="./style/add-task-img.css" />
     <link rel="stylesheet" href="./style/add-task-responsiv.css" />
     <link rel="stylesheet" href="./style/main.css" />
 
-    <!-- Scripts -->
     <script src="./scripts/add-task.js"></script>
     <script src="./scripts/render-add-task.js"></script>
     <script src="./scripts/add-task-html.js"></script>
@@ -71,12 +67,22 @@
       <section class="right-section">
         <header>
           <a class="logo-big" href="summary.html">
-            <img class="logo-dark" src="./assets/img/logo_dark.png" alt="Logo" />
+            <img
+              class="logo-dark"
+              src="./assets/img/logo_dark.png"
+              alt="Logo"
+            />
           </a>
           <span class="header-text">Kanban Board Project Management Tool</span>
           <div class="right-top">
-            <a href="help.html"><img src="./assets/img/help.png" alt="Help" /></a>
-            <span class="initials" id="user-initials" onclick="showSlideOutMenu()"></span>
+            <a href="help.html"
+              ><img src="./assets/img/help.png" alt="Help"
+            /></a>
+            <span
+              class="initials"
+              id="user-initials"
+              onclick="showSlideOutMenu()"
+            ></span>
           </div>
         </header>
 
@@ -85,9 +91,7 @@
             <div>
               <h1 class="titleTask">Add Task</h1>
 
-              <form id="myForm" onsubmit="createTask(); return false;">
-                <!-- Dynamisch generierter Inhalt -->
-              </form>
+              <form id="myForm" onsubmit="createTask(); return false;"></form>
             </div>
           </section>
         </section>
@@ -95,4 +99,3 @@
     </div>
   </body>
 </html>
-

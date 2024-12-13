@@ -1,9 +1,9 @@
 .prioBTNS {
-  display: flex; /* Aligns the buttons horizontally */
+  display: flex;
   justify-content: space-between;
-  width: 100%; /* Fixed width */
-  height: 56px; /* Fixed height */
-  gap: 16px; /* Space between buttons */
+  width: 100%;
+  height: 56px;
+  gap: 16px;
 }
 
 .addTaskBTN {
@@ -210,11 +210,11 @@
   }
 
   .prioBTNS {
-    display: flex; /* Aligns the buttons horizontally */
+    display: flex;
     flex-direction: column;
-    width: 100%; /* Fixed width */
-    height: 56px; /* Fixed height */
-    gap: 16px; /* Space between buttons */
+    width: 100%;
+    height: 56px;
+    gap: 16px;
   }
 
   .urgents,

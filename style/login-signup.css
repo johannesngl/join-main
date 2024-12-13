@@ -254,16 +254,22 @@ main {
   transform: translateY(-50%);
 }
 
+.back-to-log-in img:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 3px rgb(41, 171, 226));
+  transition: 0.2s;
+  border-radius: 8px;
+}
+
 .sign-up-2 {
   display: none;
 }
 
 .dont-show {
-  display:none
+  display: none;
 }
 
 @media (max-width: 1000px) {
-
   .sign-up-1 {
     display: none;
   }
@@ -356,7 +362,7 @@ main {
 }
 
 .notification {
-  text-align:center;
+  text-align: center;
   color: red;
 }
 

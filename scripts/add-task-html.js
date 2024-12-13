@@ -46,7 +46,7 @@ let priority = [
  */
 function renderGenerateCheckBox(element, key) {
   return /*html*/ `        
-    <label class="lblCheckBox" for="checkbox_${key}">
+    <label class="lblCheckBox">
         <div class="checkboxName">
             <div class="boardTask_userInitial checkboxInitial" style="background-color:${
               element.color
@@ -56,8 +56,10 @@ function renderGenerateCheckBox(element, key) {
             <p>${element.name}</p>
         </div>
         <div class="checkboxWrapper27">
-            <input type="checkbox" id="checkbox_${key}" name="optionen" value="${key}" onchange="handleCheckboxChange(event)">
-            <span class="checkboxIcon paddingRight"></span>
+            <label class="checkbox">
+                <input type="checkbox" name="optionen" value="${key}" onchange="handleCheckboxChange(event)">
+                <span class="checkboxIcon paddingRight"></span>
+            </label>
         </div>
     </label>
   `;

@@ -80,7 +80,6 @@
   .showTask {
     font-size: 20px;
   }
-
 }
 
 @media screen and (max-width: 850px) {
@@ -128,8 +127,6 @@
     display: block;
     width: 100%;
   }
-
-
 
   .requiring {
     position: relative;
@@ -298,7 +295,7 @@
   }
 
   .getSubtask {
-    margin-top: 10px;  
+    margin-top: 10px;
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 10px;

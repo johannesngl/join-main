@@ -97,7 +97,7 @@
     bottom: 0px;
     left: 119px;
     display: none;
-}
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -108,10 +108,8 @@
     bottom: 0px;
     left: 121px;
     display: none;
+  }
 }
-}
-
-
 
 @media screen and (max-width: 850px) {
   #myForm {
@@ -197,16 +195,15 @@
     left: 104px;
     bottom: 75px;
     display: none;
-}
+  }
 
-.accept {
+  .accept {
     height: 48px;
     top: 371px;
     bottom: 66px;
     left: 118px;
     display: none;
-}
-
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -375,14 +372,14 @@
     left: 119px;
     bottom: 10px;
     display: none;
-}
+  }
 
-.getSubtask {
-  margin-top: 10px;  
-  overflow-y: auto;
-  overflow-x: hidden;
-  border-radius: 10px;
-  position: relative;
-  top: 152px;
-}
+  .getSubtask {
+    margin-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 10px;
+    position: relative;
+    top: 152px;
+  }
 }

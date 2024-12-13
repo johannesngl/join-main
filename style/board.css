@@ -36,7 +36,6 @@
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
-
 }
 
 .kanban-tasks::-webkit-scrollbar {
@@ -261,7 +260,6 @@ img.spyglass {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(2px);
-
 }
 
 .preview-card,
@@ -300,7 +298,6 @@ img.spyglass {
   bottom: 0;
 }
 
-
 .edit-card-footer,
 .edit-card-header {
   display: flex;
@@ -309,8 +306,8 @@ img.spyglass {
 }
 
 .avatar {
-  margin:10px 10px;
-  display:flex;
+  margin: 10px 10px;
+  display: flex;
 }
 
 .edit-card-header {
@@ -333,13 +330,12 @@ img.spyglass {
   overflow-y: auto;
   padding: 10px;
   padding: 0px 20px !important;
-
 }
 
 .frm-edit-task {
   display: flex;
   flex-direction: column;
-  max-height: 80vh;  
+  max-height: 80vh;
   background-color: #fff;
 }
 
@@ -424,11 +420,10 @@ img.spyglass {
   position: absolute;
   overflow-y: scroll;
   overflow-x: hidden;
- 
 }
 
 .dropdown-contacts-edit {
-  position:absolute;  
+  position: absolute;
 }
 
 .task-participiants-dropdown {
