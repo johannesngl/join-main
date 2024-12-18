@@ -58,7 +58,7 @@ async function pushdefaultData() {
 }
 
 /**
- * Inot function for contact page
+ * Init function for contact page
  * @returns
  */
 async function onloadFunc() {
@@ -92,9 +92,10 @@ async function onloadFunc() {
   for (let i = 0; i < contactsKeys.length; i++) {
     let contactId = contactsKeys[i];
     let initials = contactResponse["contact"][contactId]["name"].split(" ");
-    let firstInitial = initials[0][0].toUpperCase();
+    let firstInitial = initials[0][0] ? initials[0][0].toUpperCase() : "";
     let secondInitial = "";
-    if (initials.length > 1) {
+
+    if (initials.length > 1 && initials[1][0]) {
       secondInitial = initials[1][0].toUpperCase();
     }
 
